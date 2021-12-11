@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 *{
-    margin: 0;
+    margin: 0vh;
+    padding: 0;
     font-family: 'Roboto', sans-serif;
+}
+p{
+    color: #525560;
 }
 :root {
     --main-color:#0e8932;
@@ -44,10 +48,17 @@
     font-size: 20px;
     color: var(--white);
 }
-.landing-button-group > span{
+ .landing-button-group > span , .landing-btn{
+    
     font-size: 20px;
     color: var(--white);
     padding: 10px 30px;
+    display: flex;
+    align-items: center;
+}
+.landing-button-group > span > span{
+    font-size: 20px;
+    color: var(--white);
 }
 .landing-button-group > span > i{
     margin-right: 5px;
@@ -78,6 +89,7 @@
     height: 2px;
     background-color: #ccc;
     border: none;
+    margin: 0px 5px;
 }
 .trusted-companies-main{
     width: 95%;
@@ -116,15 +128,17 @@
 } */
 .trusted-companies-group{
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(180px,200px));
-    margin-top: 50px;
+    grid-template-columns: repeat(6,auto);
+    margin-top: 20px;
     justify-content: space-around;
     
     
 }
 .logos{
+    width: 70%;
+    margin: auto;
     display: grid;
     justify-items: center;
     height: 50px;
@@ -137,9 +151,10 @@
 }
 .know-about-us-main{
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    
 }
-.know-about-us-block{
+.know-about-us-block,.projects-done-block{
     width: 85%;
     height: 100%;
     margin: auto;
@@ -184,10 +199,11 @@
 .about-us-content > p{
     line-height: 1.5;
     color: #525560;
+    font-size: 2.5vh;
 }
 .about-us-content > h2{
     font-size: 4vh;
-    margin: 50px 0px 20px 0px;
+    margin: 0px 0px 20px 0px;
 }
 .donate{
     margin-top: 20px;
@@ -196,7 +212,7 @@
     font-size: 18px;
 }
 .know-about-us-video{
-    height: 100%;
+    height: 100vh;
   
     width: 100%;
     display: grid;
@@ -226,14 +242,20 @@
     font-size: 2.5vh;
 }
 .what-do-we-do{
+    height: 100%;
+    
+}
+.what-we-do-right{
     height: 130vh;
 }
 .points-what-we-do{
-    width: 100%;
+    width: calc(100% + 30px);
     margin-top: 20px;
     height: fit-content;
     display: flex;
     flex-direction: row;
+    position: relative;
+    left: -30px;
 }
 .vertical-line{
     display: inline-block;
@@ -274,4 +296,447 @@
 .point-content > p{
     font-size: 2.5vh;
     line-height: 1.5;
+    color: #525560;
+}
+.projects-done-block{
+    display: grid;
+    grid-template-columns: 100%;
+}
+.projects-done-block > .know-about-us-content > .about-us-content> h1{
+    width: 60%;
+}
+.projects-card-block{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+    justify-content: space-between;
+}
+.card{
+    width: 90%;
+    height: 60vh;
+    margin:5vh auto;
+    margin-bottom: 2.5vh;
+    background-color: red;
+    background-image: url("https://cdn.cbeditz.com/cbeditz/preview/rider-cb-picsart-editing-background-11606574554unvvw022po.jpg");
+    background-size: cover;
+    border-radius: 16px;
+}
+.card{
+    display: grid;
+    place-content: center;
+    place-items: center;
+    
+
+}
+.card-body{
+    width: 70%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-body > h3{
+    font-size: 4vh;
+}
+.card-body > p{
+    font-size: 2vh;
+    margin-top: 2vh;
+    margin-bottom: 6vh;
+    color: white;
+}
+.card-body  > a{
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+/* responsive */
+@media (min-width:900px) and (max-width:1200px){
+    .know-about-us-main{
+        padding-top: 50px;
+    }
+    .what-do-we-do{
+        padding-bottom: 50px;
+    }
+    .grp-1 > .icon{
+        width: 50px;
+        height: 30px;
+    }
+    .about-us-title > hr{
+        width: 50px;
+        margin-right: 10px;
+        background-color:#d95d02;
+        outline: 0;
+        border: 0px;
+        height: 2px;
+    }
+    .about-us-title > h3{
+        letter-spacing: 2px;
+        color: #d95d02;
+    }
+    .about-us-content{
+        width: calc(100% - 60px);
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+    }
+    .top-content-group > h1{
+        font-size: 54px;
+    }
+    .landing-btn{
+        outline: 0;
+        border-radius: 4px;
+        border: 0px;
+        background-color: var(--main-color);
+        padding: 10px 30px;
+        font-size: 18px;
+        color: var(--white);
+    }
+    .landing-button-group > span{
+        font-size: 20px;
+        color: var(--white);
+        padding: 10px 30px;
+    }
+    .trusted-companies-main > h2{
+        text-align: center;
+        color: #6b6b85;
+        font-size: 4vh;
+    }
+    .about-us-title > h3{
+        font-size: 2.1vh;
+    }
+    .about-us-content > h1{
+        margin: 40px 0px 30px 0px;
+        font-size: 6vh;
+    }
+    .about-us-content > p{
+        line-height: 1.5;
+        color: #525560;
+        font-size: 2.3vh;
+    }
+    .about-us-content > h2{
+        font-size: 3vh;
+        margin: 00px 0px 20px 0px;
+    }
+    .donate{
+        margin-top: 20px;
+        width: fit-content;
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    .point-content-main-para{
+        font-size: 2.3vh;
+    }
+    .point-content > h3{
+        font-size: 2.7vh;
+        margin: 5px 0px;
+    }
+    .point-content > p{
+        font-size: 2.3vh;
+        line-height: 1.5;
+        color: #525560;
+    }
+}
+@media (min-width:1026px){
+    .know-about-us-main{
+        padding-top: 0px;
+    }
+    .what-do-we-do{
+        padding-bottom: 0px;
+    }
+}
+@media (max-width:900px) {
+    .top-content-group > h1{
+         font-size: 7vh;
+    }
+    .landing-page-bottom-content > h3{
+        font-size: 3vh;
+    }
+    .landing-btn{
+        outline: 0;
+        border-radius: 4px;
+        border: 0px;
+        background-color: var(--main-color);
+      
+    }
+   .landing-button-group > span , .landing-btn{
+        font-size: 15px;
+        color: var(--white);
+        padding: 10px 30px;
+        display: flex;
+        align-items: center;
+    }
+    .landing-button-group > span > span{
+        font-size: 15px;
+        color: var(--white);
+        display: inline-block;
+        
+    }
+    .logos{
+        width: 80%;
+        margin: auto;
+        display: grid;
+        justify-items: center;
+        height: 50px;
+        padding: 10px;
+    }
+    .trusted-companies-group{
+        width: 100%;
+        margin-bottom: 20px;
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        margin-top: 20px;
+        justify-content: space-around;
+        
+        
+    }
+    .grp-1 > .icon{
+        width: 40px;
+        height: 35px;
+    }
+    .know-about-us-block,.projects-done-block{
+        width: 95%;
+        height: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 100%;
+        align-items: center;
+        justify-items: center;
+    }
+    .know-about-us-block{
+        padding-top: 50px;
+    }
+    .know-about-us-content{
+        width: 90%;
+        height: fit-content;
+        display: grid;
+      
+    }
+    .projects-done-block > .know-about-us-content > .about-us-content> h1{
+        width: 100%;
+    }
+}
+@media (max-width:800px) {
+    .top-content-group > h1{
+        font-size: 7vh;
+   }
+   .landing-page-bottom-content > h3{
+       font-size: 3vh;
+   }
+   .landing-button-group > span , .landing-btn{
+    font-size: 15px;
+    color: var(--white);
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+}
+.landing-button-group > span > span{
+    font-size: 15px;
+    color: var(--white);
+    display: inline-block;
+    
+}
+    .trusted-companies-main > h2{
+        text-align: center;
+        color: #6b6b85;
+        font-size: 4vh;
+    }
+    .about-us-title > h3{
+        font-size: 2.1vh;
+    }
+    .about-us-content > h1{
+        margin: 40px 0px 30px 0px;
+        font-size: 5vh;
+    }
+    .about-us-content > p{
+        line-height: 1.5;
+        color: #525560;
+        font-size: 2.3vh;
+    }
+    .about-us-content > h2{
+        font-size: 3vh;
+        margin: 0px 0px 20px 0px;
+    }
+    .donate{
+        margin-top: 20px;
+        width: fit-content;
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    .point-content-main-para{
+        font-size: 2.3vh;
+    }
+    .point-content > h3{
+        font-size: 2.7vh;
+        margin: 5px 0px;
+    }
+    .point-content > p{
+        font-size: 2.3vh;
+        line-height: 1.5;
+        color: #525560;
+    }
+}
+@media (max-width:700px) {
+    .grp-1 > .icon{
+        width: 50px;
+        height: 35px;
+    }
+    .about-us-title > hr{
+        width: 50px;
+        margin-right: 10px;
+        background-color:#d95d02;
+        outline: 0;
+        border: 0px;
+        height: 2px;
+    }
+    .about-us-title > h3{
+        letter-spacing: 2px;
+        color: #d95d02;
+    }
+    .about-us-content{
+        width: calc(100% - 60px);
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+    }
+}
+@media (max-width:600px) {
+    .top-content-group > h1{
+        font-size: 5vh;
+   }
+   .landing-page-bottom-content > h3{
+       font-size: 2vh;
+   }
+    .grp-1 > .icon{
+        width: 50px;
+        height: 30px;
+    }
+    .about-us-title > hr{
+        width: 30px;
+        margin-right: 10px;
+        background-color:#d95d02;
+        outline: 0;
+        border: 0px;
+        height: 2px;
+    }
+    .about-us-title > h3{
+        letter-spacing: 2px;
+        color: #d95d02;
+    }
+    .about-us-content{
+        width: calc(100% - 40px);
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+    }
+}
+@media (max-width:500px) {
+    .vertical-line{
+        margin: 0px 0px;
+        margin-right: 15px;
+    }
+    .grp-1 > .icon{
+        width: 65px;
+        height: 30px;
+    }
+    .grp-1{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .top-content-group > h1{
+        font-size: 34px;
+    }
+    .landing-button-group > span , .landing-btn{
+        font-size: 15px;
+        color: var(--white);
+        padding: 5px 15px;
+        display: flex;
+        align-items: center;
+    }
+    .landing-btn{
+        display: inline;
+    }
+    .landing-button-group > span > span{
+        font-size: 15px;
+        color: var(--white);
+        display: inline-block;
+        
+    }
+    .donate{
+        margin-top: 20px;
+        width: fit-content;
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    /* .trusted-companies-main > h2{
+        text-align: center;
+        color: #6b6b85;
+        font-size: 3vh;
+    }
+    .about-us-title > h3{
+        font-size: 1.7vh;
+    }
+    .about-us-content > h1{
+        margin: 40px 0px 30px 0px;
+        font-size: 4.5vh;
+    }
+    .about-us-content > p{
+        line-height: 1.5;
+        color: #525560;
+        font-size: 2vh;
+    }
+    .about-us-content > h2{
+        font-size: 3vh;
+        margin: 50px 0px 20px 0px;
+    }
+    .donate{
+        margin-top: 20px;
+        width: fit-content;
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    .point-content-main-para{
+        font-size: 2vh;
+    }
+    .point-content > h3{
+        font-size: 2.8vh;
+        margin: 5px 0px;
+    }
+    .point-content > p{
+        font-size: 2vh;
+        line-height: 1.5;
+        color: #525560;
+    } */
+}
+@media (max-width:400px) {
+    .top-content-group> h1{
+        font-size: 28px;
+    }
+    .vertical-line{
+        margin: 0px 0px;
+        margin-right: 15px;
+    }
+    .grp-1 > .icon{
+        width: 75px;
+        height: 30px;
+    }
+    .about-us-title > h3{
+        font-size: 1.5vh;
+    }
+    .about-us-content > h1{
+      font-size: 4vh;
+      margin: 15px 0px;
+    }
+    .about-us-content > p{
+        font-size: 2vh;
+    }
+    .about-us-content > h2{
+        margin: 15px 0px;
+    }
+    .grp-1 > .point-content {
+        padding-left: 10px;
+    }
+    .point-content > p{
+font-size: 2vh;
+    }
 }
