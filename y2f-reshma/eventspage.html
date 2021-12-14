@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <meta http-equiv="X-UA-compatible">
+      <link rel="stylesheet" href="style3.css">
+      <meta name="viewport" content="width=device-width">
+    </head>
+</head>
+<body>
+      <div class="full">
+           <div class="one">
+               <section class="one1">
+                   <div class="firsthalf">
+                      
+                      <div class="top1">
+                      <div class="orangeline"><img src="line.svg" alt=""></div>
+                      <div class="top"><P>TOP EVENTS</P></div>
+                      </div>
+                      <div class="our-goal"><h1>Our goal is to make <br>  water available for <br> everyone</h1></div>
+                      <div class="our-goalp"><p>Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.Nunc  ut sem vitae risus tristique posuere.</p> </div>
+                      <div class="goal-button2"><button>LIVE EVENTS</button></div>
+                   </div>
+                   <div class="secondhalf">
+                     <div class="goalcard">
+                      <div class="goal-img"><img src="goal1.svg" alt=""></div>
+                      <div class="goal-htag"><h3>Don’t destroy greenery and don’t <br> spoil scenery.</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur<br>badipiscing elit. Suspendisse varius enim</p>
+                     
+                    </div>
+                    </div>
+                    <div class="goalcard">
+                        <div class="goal-img"><img src="goal1.svg" alt=""></div>
+                        <div class="goal-htag"><h3>Why saving wildlife is  extremely <br> important</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Suspendisse varius enim</p>
+                           
+                          </div>
+                      </div>
+                      <div class="goalcard">
+                        <div class="goal-img"><img src="goal1.svg" alt=""></div>
+                        <div class="goal-htag"><h3>Caring for the present is caring <br> for the future</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit. Suspendisse varius enim</p>
+                         
+                          </div>
+                      </div>
+                    </div>
+                     <!-- mobile card/circles -->
+                    <div class="secondhalf1">
+                      <div class="SH">
+                      <div class="goalcard1">
+                       <div class="goal-img1"><img src="goalcard.svg" alt=""></div>
+                       <div class="goal-htag1"><h3>Don’t destroy greenery and don’t <br> spoil scenery.</h3>
+                       <p>Lorem ipsum dolor sit amet, consectetur<br>badipiscing elit. Suspendisse varius enim</p>
+                       
+                     </div>
+                     </div>
+                     <div class="goalcard1">
+                         <div class="goal-img1"><img src="goalcard.svg" alt=""></div>
+                         <div class="goal-htag1"><h3>Why saving wildlife is  extremely <br> important</h3>
+                             <p>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Suspendisse varius enim</p>
+                         </div>
+                       </div>
+                       <div class="goalcard1">
+                         <div class="goal-img1"><img src="goalcard.svg" alt=""></div>
+                         <div class="goal-htag1"><h3>Caring for the present is caring <br> for the future</h3>
+                             <p>Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit. Suspendisse varius enim</p>
+                           </div>
+                       </div>
+                      </div>
+                     </div>
+                   <div class="dot1">
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                   </div>
+                  <!-- The dots/circles -->
+                  <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                  </div>
+                
+                 
+                  <script>var slideIndex = 1;
+                    showSlides(slideIndex);
+                    
+                    // Next/previous controls
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+                    
+                    // Thumbnail image controls
+                    function currentSlide(n) {
+                      showSlides(slideIndex = n);
+                    }
+                    
+                    function showSlides(n) {
+                      var i;
+                      var slides = document.getElementsByClassName("goalcard1");
+                      var dots = document.getElementsByClassName("dot");
+                      if (n > slides.length) {slideIndex = 1}
+                      if (n < 1) {slideIndex = slides.length}
+                      for (i = 0; i < slides.length; i++) {
+                          slides[i].style.display = "none";
+                      }
+                      for (i = 0; i < dots.length; i++) {
+                          dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";
+                      dots[slideIndex-1].className += " active";
+                    }
+                    </script>
+                </div>
+               </section>
+           </div>
+             <div class="upcoming">
+                 <h1 class="upcomingh1">Read our Upcoming events</h1>
+                 <p class="upcomingp">Edit this text to make it your own. To edit, simply click directly on the text to start We are served</p>
+             </div>
+
+            <div class="second">
+                 <div class="cardsecond">
+                    <section class="card">
+                        <div class="card-item">
+                          <div class="card-image pic1"></div>
+                          <p class="heading">Don't destroy greenery and don't spoil the scenary</p>
+                          <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim</p>
+                          <div class="goal-button2"><button>Register now</button></div>
+                        </div>
+                        <div class="card-item">
+                          <div class="card-image pic2"></div>
+                          <p class="heading">Is climate change happening faster than ecpected</p>
+                          <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim</p>
+                          <div class="goal-button2"><button>Register now</button></div>
+                        </div>
+                        <div class="card-item">
+                          <div class="card-image pic3"></div>
+                          <p class="heading">
+                            Top 10 facts about wind farms you didn't notice</p>
+                            <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim</p>
+                            <div class="goal-button2"><button>Register now</button></div>
+                           </div>
+                        <div class="card-item">
+                          <div class="card-image pic4"></div>
+                         <p class="heading">Our goal is to make water available for everyone</p>
+                         <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim</p>
+                         <div class="goal-button2"><button>Register now</button></div>
+                        </div>
+                      </section>
+                    </div>
+                </section>
+            </div>
+             
+            <div class="readd">
+                <h1>Our events</h1>
+            </div>
+
+            <div class="third">
+             
+                <section class="greens">
+                    <div class="total-card">
+                    <div class="green-card">
+                     <div class="in">
+                        <div class="in1">
+                         <h2>25</h2>
+                         <p class="month">SEP</p> 
+                        </div>
+                     <div class="in2">
+                        <p  class="events">Next events</p> 
+                       <hr class="line1"></hr>
+        
+                        <h1 class="program" >Say no to plastic usage and<br>
+                            save the planet</h1>
+                     </div>
+                    </div>
+                  </div>
+                    <div class="green-card">
+                      <div class="in">
+                        <div class="in11">
+                         <h2 class="Donate">20</h2>
+                         <p class="month2">SEP</p> 
+                        </div>
+                     <div class="in22">
+                        <p class="events2">Next events</p>
+                        <hr class="line2"></hr>
+                        <h3 class="program2">Weekly cleaning program</h3>
+                     </div>
+                    </div>
+                     </div>
+                  </div>
+                </section>
+            </div>
+      
+        </div>
+</body>
+</html>
