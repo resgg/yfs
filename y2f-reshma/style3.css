@@ -46,13 +46,13 @@ body{
     height:59px;
     width:496px;
 }
-button{
-    margin-top: 35px;
-   margin-left: 80px;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    Width : 154px;
-    Height : 45px;
+.goal-button2{
+    width:178px;
+    height:51px;
+    margin-top: 20px;
+    margin-bottom:20px;
+    margin-left:10px;
+    padding:14px;
     border-radius: 4px;
     border:none;
     background-color: #0E8932;
